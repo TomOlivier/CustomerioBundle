@@ -20,7 +20,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class EEcustomerioExtension extends Extension
+class EECustomerioExtension extends Extension
 {
     /**
      * {@inheritDoc}
