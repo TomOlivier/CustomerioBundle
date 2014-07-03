@@ -49,12 +49,17 @@ class Customerio
         $this->makeRequest($endpoint, $method, $options);
     }
 
-    public function track($customerId, $options)
+    public function track($customerId, $event, $options)
     {
         $method = 'POST';
         $endpoint = $base . $customerId . '/events';
 
-        $this->makeRequest($endpoint, $method, $options);
+        $payload = array(
+            'name' => $event,
+            'data' => $options
+        );
+
+        $this->makeRequest($endpoint, $method, $payload);
     }
 
     private function makeRequest($endpoint, $method, $options)

@@ -12,7 +12,7 @@
     </parameters>
 
     <services>
-        <service id="Customerio" class="%ee_customerio.customerio.service.class%">
+        <service id="customerio" class="%ee_customerio.customerio.service.class%">
             <argument>%ee_customerio.api_key%</argument>
             <argument>%ee_customerio.site_id%</argument>
             <argument>%ee_customerio.ssl%</argument>
