@@ -21,6 +21,7 @@ class Customerio
     private $siteId;
     private $dataCenter;
     private $ssl;
+    private $base;
 
     /**
      * Initializes Customerio
@@ -34,7 +35,7 @@ class Customerio
         $this->siteId = $siteId;
         $this->ssl = $ssl;
 
-        $base = 'https://track.customer.io/api/v1/customers/';
+        $this->base = 'https://track.customer.io/api/v1/customers/';
 
         if (!function_exists('curl_init')) {
             throw new \Exception('This bundle needs the cURL PHP extension.');
@@ -44,7 +45,7 @@ class Customerio
     public function identify($customerId, $options)
     {
         $method = 'PUT';
-        $endpoint = $base . $customerId . '/';
+        $endpoint = $this->base . $customerId . '/';
 
         $this->makeRequest($endpoint, $method, $options);
     }
@@ -52,7 +53,7 @@ class Customerio
     public function track($customerId, $event, $options)
     {
         $method = 'POST';
-        $endpoint = $base . $customerId . '/events';
+        $endpoint = $this->base . $customerId . '/events';
 
         $payload = array(
             'name' => $event,
