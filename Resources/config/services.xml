@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="ee_customerio.api_key">null</parameter>
+        <parameter key="ee_customerio.site_id">null</parameter>
+        <parameter key="ee_customerio.ssl">true</parameter>
+        <parameter key="ee_customerio.customerio.service.class">EE\CustomerioBundle\Services\Customerio</parameter>
+    </parameters>
+
+    <services>
+        <service id="Customerio" class="%ee_customerio.customerio.service.class%">
+            <argument>%ee_customerio.api_key%</argument>
+            <argument>%ee_customerio.site_id%</argument>
+            <argument>%ee_customerio.ssl%</argument>
+        </service>
+    </services>
+
+</container>

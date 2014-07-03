@@ -1,0 +1,25 @@
+{
+    "name" : "Explee/CustomerioBundle",
+    "description" : "A simple wrapper of the Customer.io REST API",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "Thomas Olivier",
+        "email" : "thomas@explee.com"
+    }],
+    "keywords" : [
+        "customer.io", "api", "tracking"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "require" : {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle": "2.*",
+    },
+    "autoload" : {
+        "psr-0" : {
+            "EE\\CustomerioBundle" : ""
+        }
+    },
+    "target-dir" : "EE/CustomerioBundle"
+}

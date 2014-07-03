@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xsd:schema xmlns="http://symfony.com/schema/dic/ee_customerio"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://symfony.com/schema/dic/ee_customerio"
+    elementFormDefault="qualified">
+
+    <xsd:element name="config" type="config" />
+
+    <xsd:complexType name="config">
+        <xsd:attribute name="api_key" type="xsd:string" />
+        <xsd:attribute name="site_id" type="xsd:string" />
+        <xsd:attribute name="ssl" type="xsd:boolean" />
+    </xsd:complexType>
+
+</xsd:schema>
