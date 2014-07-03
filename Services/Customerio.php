@@ -11,8 +11,6 @@
 
 namespace EE\CustomerioBundle\Services;
 
-use EE\CustomerioBundle\Services\
-
 /**
  * The main Customerio service
  */
