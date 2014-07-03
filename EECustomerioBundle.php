@@ -1,11 +1,11 @@
 <?php
 
-namespace EE\MailChimpBundle;
+namespace EE\CustomerioBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
- * MailChimpBundle
+ * Customerio Bundle
  *
  * @author Thomas Olivier <thomas@explee.com>
  */
